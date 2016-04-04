@@ -1,58 +1,42 @@
-var h1;
-var colors = [
-'red',
-'blue',
-'gold',
-'grey',
-'lightseagreen',
-'coral'
-];
+var random_number = function()
 
-var createtag = function(){
-    
-    h1 = document.createElement('h1');
-    h1.textContent = 'my h1 tag';
-    document.body.appendChild(h1);
-}
 
-var randompixel = function (){
-    
-    var number = Math.round(
+var html_element;
+
+var make_element = function(element_name){
+        var element = document.createElement(element_name);
+        element.textContent = random_number();
+        document.body.appendChild(element);
         
-        Math.random()*500
         
-        )+1;
-        
-        return number + 'px';
+        html_element = element;
         
 }
 
-var randomColor = function(){
-    
-    var randomNumber = Math.round(
-        
-        Math.random() * colors.legth
-        
-        ) - 1;
-        
-        return colors[randomNumber];
-        
-};
 
 
-document.addEventListener('DOMContentLoaded',function(event){
+
+
+var  ul;
+
+var  li;
+
+ul = document.createElement('ul');
+
+li = document.createElement('li');
+
+
+
+document.addEventListener('DOMContentLoaded',function(){
     
-    createTag();
     
-    h1.addEventListener('mouseover',function(event){
-       
-       this.style.backgroundColor = randomColor();
-       this.style.transition = '1s';
-       this.style.height = randomPixel();
-       
-            
-    });
-    
+        document.body.appendChild(ul);
+        document.body.appendChild(li);
+
+
+    ul.textContent = 'my ul tag';
+
+    li.textContent = 'my li tag';
     
 });
 
