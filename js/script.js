@@ -1,6 +1,3 @@
-// var random_number = function()
-
-
 var html_element;
 
 var make_element = function(element_name){
@@ -11,32 +8,49 @@ var make_element = function(element_name){
         
         html_element = element;
         
-}
+};
 
-// var  ul;
+var  ul;
 
-// var  li;
+var  li;
 
-// ul = document.createElement('ul');
+ul = document.createElement('ul');
 
-// li = document.createElement('li');
+li = document.createElement('li');
 
 
 
 document.addEventListener('DOMContentLoaded',function(){
     
-        make_element('ul');    
+        make_element('ul');
+        make_element('li');
     
-    
-//         document.body.appendChild(ul);
-//         document.body.appendChild(li);
+    ul = document.createElement('ul');
 
+    li = document.createElement('li');
 
-//     ul.textContent = 'my ul tag';
-
-//     li.textContent = 'my li tag';
     
 });
+
+
+var createTags = function(){
+    
+    
+    for(var i=0; i < 5; i++){
+        
+        console.log(i);
+    };
+
+
+};
+
+
+document.addEventListener('DOMContentLoaded', function(event) {
+    
+    console.log('dom browser loaded');
+})
+
+
 
 
 
