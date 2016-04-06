@@ -1,36 +1,47 @@
-var html_element;
+var button;
 
-var input_box;
-
-var input_box = document.createElement('input'){
-
-        input_box.textContent = enter a number;
-        
-};
-
-      
-
-
-var make_element = function(element_name){
-        var element = document.createElement(element_name);
-        element.textContent = element_name;
-        document.body.appendChild(element);
-        
-        
-        html_element = element;
-        
-};
-
-
-
-document.addEventListener('DOMContentLoaded', function(event) {
+var change_fontsize = function(){
     
-    make_element('ul');
-    make_element('li');
     
-    document.body.appendChild(input_box);
-    input_box.textContent = enter a number;  
+    if (button.style.fontSize === '50px') {
+        
+        button.style.fontSize = '10px';
+        
+    } else { button.style.fontSize = '50px';
+    
+    }
+    
+    
+};
+    
+
+
+
+document.addEventListener('DOMContentLoaded', function(event){
+    
+    
+    
+   button = document.createElement('button');
+   
+   document.body.appendChild(button);
+   
+   button.textContent = 'my button';
+   
+   button.style.backgroundColor = 'red';
+   
+   button.style.fontSize = '50px';
+   
+
+button.addEventListener('click', function(event){
+    
+    change_fontsize();
+    
+    
+}); 
+
+    
 });
+
 
 
 
