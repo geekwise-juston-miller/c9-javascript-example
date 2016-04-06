@@ -1,44 +1,34 @@
-var button;
+var photo_container;
 
-var change_fontsize = function(){
+var img_urls = new Array;
+
+var add_images = function(number_of_images){
     
+    var image;
     
-    if (button.style.fontSize === '50px') {
+    for(var i=0; i< number_of_images; i++){
+        img_urls.push('/images/profile_photo_' + (i + 1) + '.jpg');
+        image = document.createElement('img');
+        image.setAttribute('src', img_urls[i]);
+        document.body.appendChild(image);
         
-        button.style.fontSize = '10px';
-        
-    } else { button.style.fontSize = '50px';
-    
-    }
-    
-    
+    };
 };
-    
+
+
 
 
 
 document.addEventListener('DOMContentLoaded', function(event){
     
+    add_images(68);
     
     
-   button = document.createElement('button');
-   
-   document.body.appendChild(button);
-   
-   button.textContent = 'my button';
-   
-   button.style.backgroundColor = 'red';
-   
-   button.style.fontSize = '50px';
-   
-
-button.addEventListener('click', function(event){
+    document.addEventListener('mouseover', function(event) {
+        
+  
     
-    change_fontsize();
-    
-    
-}); 
-
+ });
     
 });
 
