@@ -12,30 +12,35 @@ var add_images = function(number_of_images){
         image = document.createElement('img');
         image.setAttribute('src', img_urls[i]);
         image.style.width = number_of_images;
-        
         document.body.appendChild(image);
-        
         
         
          image.addEventListener('mouseover', function(event){
              
-             this.style.transform = "rotateZ(720deg)";
+             this.style.transform = 'rotateX(360deg)';
              this.style.width = '250px';
              this.style.height = '250px';
-             this.style.transition = 'width 2s, height 2s, transform 2s';
+             this.style.transition = 'width 1s, height 1s, transform 1s';
          });
          
          image.addEventListener('mouseout', function(event){
              
-             
-             this.style.transform = "rotateZ(720deg)";
+             this.style.transform = 'rotateX(0deg)';
              this.style.width = '75px';
              this.style.height = '75px';
              this.style.transition = 'width .5s, height .5s, transform .5s';
-             
-            
-         }); 
         
+        
+         });
+         
+        //  image.addEventListener('click', function(event) {
+             
+        //      this.style.transform = "rotateY(180deg)";
+             
+             
+        //  });
+         
+         
     }
 };
 

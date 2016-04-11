@@ -1,4 +1,13 @@
 body{
     background-color: #fff;
+    display: block;
+    margin: 0;
+    padding: 0;
+    
+}
+
+img{
+    margin: 15px;
+    
     
 }
